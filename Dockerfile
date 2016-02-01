@@ -1,4 +1,5 @@
 FROM base/archlinux
+MAINTAINER Justin Buchanan <justbuchanan@gmail.com>
 
 # update/init keyring
 RUN pacman-key --init

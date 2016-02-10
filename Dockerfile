@@ -14,3 +14,6 @@ RUN pacman -Syu --noconfirm
 # upgrade db
 RUN pacman-db-upgrade
 
+# clear package cache to save disk space
+RUN pacman -Scc --noconfirm
+

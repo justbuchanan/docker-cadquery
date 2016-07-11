@@ -14,10 +14,5 @@ RUN pacman -Syu --noconfirm
 # upgrade db
 RUN pacman-db-upgrade
 
-# switch from https to http for mirror
-# TODO: switch back to https
-RUN sed -i 's/https/http/' /etc/pacman.d/mirrorlist
-
 # clear package cache to save disk space
 RUN pacman -Scc --noconfirm
-

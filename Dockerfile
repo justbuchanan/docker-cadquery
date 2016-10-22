@@ -14,5 +14,8 @@ RUN pacman -Syu --noconfirm
 # upgrade db
 RUN pacman-db-upgrade
 
+# update certs
+RUN pacman -S --noconfirm ca-certificates-mozilla
+
 # clear package cache to save disk space
 RUN pacman -Scc --noconfirm

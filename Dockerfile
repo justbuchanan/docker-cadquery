@@ -9,13 +9,12 @@ RUN pacman-key --populate archlinux
 RUN pacman --noconfirm -Sy archlinux-keyring
 
 # update packages
-RUN pacman -Syu --noconfirm
+RUN pacman -Syyu --noconfirm
+#clear package cache
+RUN rm /var/cache/pacman/pkg/*
 
 # upgrade db
 RUN pacman-db-upgrade
-
-# update certs
-RUN pacman -S --noconfirm ca-certificates-mozilla
 
 # clear package cache to save disk space
 RUN pacman -Scc --noconfirm

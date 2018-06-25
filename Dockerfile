@@ -11,5 +11,5 @@ RUN git clone https://github.com/fragmuffin/cqparts
 RUN git clone https://github.com/zignig/cqparts-bucket
 
 # Render a test file to ensure that the basics are working
-COPY render.py .
-RUN python2 render.py out.stl
+COPY test.py .
+RUN python2 test.py out.stl

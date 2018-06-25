@@ -1,3 +1,6 @@
+# Example cadquery script
+# Usage: test.py output.stl
+
 import cadquery as cq
 from cadquery import exporters
 import sys

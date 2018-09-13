@@ -1,6 +1,8 @@
 FROM continuumio/anaconda3
 MAINTAINER Justin Buchanan <justbuchanan@gmail.com>
 
+RUN apt update
+
 RUN apt install -y freecad libglu1-mesa python-pip
 RUN conda install -c pythonocc -c oce -c conda-forge -c dlr-sc -c CadQuery cadquery-occ
 RUN pip2 install cqparts
